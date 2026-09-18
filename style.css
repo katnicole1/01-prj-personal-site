@@ -1,1 +1,948 @@
-/* Add you CSS here */
+/* ==============================
+   BASIC PAGE SETTINGS
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f8ff;
+    color: #071a40;
+
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   COLORS
+
+   Main Blue: #087cf0
+   Dark Blue: #071a40
+   Light Blue: #dcecff
+   White: #ffffff
+============================== */
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+header {
+    background-color: #071a40;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: #087cf0;
+}
+
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    color: #55b5ff;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    min-height: 90vh;
+
+    background-color: #087cf0;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    overflow: hidden;
+}
+
+
+/* Diagonal white shape */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45%;
+    height: 130%;
+
+    right: -20%;
+    top: -15%;
+
+    background-color: white;
+
+    transform: rotate(15deg);
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+}
+
+
+.small-title {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+}
+
+
+.hero h1 {
+    font-size: 80px;
+
+    line-height: 0.85;
+
+    margin: 25px 0;
+
+    letter-spacing: -5px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: #071a40;
+}
+
+
+.hero h2 {
+    font-size: 20px;
+
+    letter-spacing: 5px;
+
+    margin-top: 30px;
+}
+
+
+.hero-description {
+    max-width: 450px;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   GIANT BACKGROUND NUMBER
+============================== */
+
+.big-number {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+
+    font-size: 150px;
+    font-weight: 900;
+
+    color: #087cf0;
+
+    line-height: 1;
+
+    z-index: 3;
+}
+
+
+/* ==============================
+   HERO BUTTON
+============================== */
+
+.game-button {
+    display: inline-block;
+
+    background-color: #071a40;
+
+    color: white;
+
+    padding: 15px 28px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transform: skew(-8deg);
+
+    transition: 0.2s;
+}
+
+
+.game-button span {
+    margin-left: 20px;
+}
+
+
+.game-button:hover {
+    background-color: white;
+
+    color: #071a40;
+
+    transform: skew(-8deg) translateX(10px);
+}
+
+
+/* ==============================
+   SIDE TEXT
+============================== */
+
+.side-info {
+    position: absolute;
+
+    right: 7%;
+    bottom: 8%;
+
+    z-index: 3;
+
+    text-align: right;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    color: #071a40;
+}
+
+
+.side-info p {
+    margin: 5px;
+}
+
+
+/* ==============================
+   NORMAL SECTIONS
+============================== */
+
+.light-section {
+    position: relative;
+
+    padding: 100px 10%;
+
+    overflow: hidden;
+}
+
+
+.section-number {
+    position: absolute;
+
+    right: 5%;
+    top: 20px;
+
+    font-size: 200px;
+
+    font-weight: bold;
+
+    color: #dcecff;
+
+    z-index: -1;
+}
+
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+
+.section-heading p {
+    color: #087cf0;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+}
+
+
+.section-heading h2 {
+    font-size: 60px;
+
+    margin: 0;
+
+    letter-spacing: -3px;
+}
+
+
+/* ==============================
+   PROFILE
+============================== */
+
+.profile-container {
+    max-width: 950px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+.profile-picture {
+    min-width: 360px;
+    width: 360px;
+    height: 600px;
+
+    background-color: #087cf0;
+
+    transform: skew(-4deg);
+
+    box-shadow: 15px 15px 0 #071a40;
+
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.profile-info {
+    max-width: 600px;
+}
+
+
+.label {
+    color: #087cf0;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 32px;
+}
+
+
+.profile-info h3 {
+    margin-top: 0;
+
+    font-size: 32px;
+}
+
+.profile-name {
+    font-size: 55px !important;
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    color: #071a40;
+
+    border-left: 8px solid #ff19e6;
+
+    padding-left: 15px;
+}
+/* ==============================
+   SKILLS
+============================== */
+
+.blue-section {
+    position: relative;
+
+    padding: 100px 10%;
+
+    background-color: #071a40;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+.skills-number {
+    right: -20px;
+
+    color: rgba(8, 124, 240, 0.15);
+}
+
+
+.white-heading p {
+    color: #55b5ff;
+}
+
+
+.skills-container {
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.skill-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+    background-color: #087cf0;
+
+    transform: skew(-5deg);
+
+    transition: 0.2s;
+}
+
+
+.skill-row:hover {
+    transform: skew(-5deg) translateX(15px);
+
+    background-color: #1594ff;
+}
+
+
+.skill-number {
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.skill-row h3 {
+    width: 230px;
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.skill-line {
+    height: 2px;
+
+    flex: 1;
+
+    background-color: white;
+}
+
+
+.skill-row span:last-child {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==============================
+   PROJECTS
+============================== */
+
+.projects-container {
+    max-width: 1000px;
+}
+
+
+.project-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    background-color: white;
+
+    margin-bottom: 35px;
+
+    padding: 25px;
+
+    border-left: 8px solid #087cf0;
+
+    box-shadow: 0 10px 30px rgba(7, 26, 64, 0.1);
+
+    transition: 0.2s;
+}
+
+
+.project-card:hover {
+    transform: translateX(12px);
+
+    box-shadow: 0 15px 35px rgba(7, 26, 64, 0.18);
+}
+
+
+.project-number {
+    position: absolute;
+
+    right: 20px;
+    top: -25px;
+
+    font-size: 80px;
+
+    font-weight: bold;
+
+    color: #dcecff;
+}
+
+
+.project-image {
+    min-width: 250px;
+    height: 170px;
+
+    background-color: #071a40;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+
+.project-info {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.project-info h3 {
+    font-size: 27px;
+
+    margin: 5px 0;
+}
+
+
+.project-info p {
+    max-width: 450px;
+}
+
+
+.project-info a {
+    color: #087cf0;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.project-info a:hover {
+    color: #071a40;
+}
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+.contact-section {
+    min-height: 600px;
+
+    background-color: #087cf0;
+
+    color: white;
+
+    position: relative;
+
+    padding: 100px 10%;
+
+    overflow: hidden;
+}
+
+
+.contact-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.contact-content > p:first-child {
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.contact-content h2 {
+    font-size: 85px;
+
+    line-height: 0.85;
+
+    margin: 30px 0;
+}
+
+
+.contact-content > p {
+    max-width: 400px;
+}
+
+
+.contact-number {
+    right: 5%;
+}
+
+
+.white-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 30px;
+
+    background-color: white;
+
+    color: #071a40;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transform: skew(-8deg);
+
+    transition: 0.2s;
+}
+
+
+.white-button:hover {
+    transform: skew(-8deg) translateX(10px);
+
+    background-color: #071a40;
+
+    color: white;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    background-color: #071a40;
+
+    color: white;
+
+    padding: 25px 10%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==============================
+   MOBILE DESIGN
+============================== */
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .hero h1 {
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+
+    .big-number {
+        font-size: 250px;
+    }
+
+
+    .side-info {
+        display: none;
+    }
+
+
+    .section-heading h2 {
+        font-size: 45px;
+    }
+
+
+    .profile-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .profile-picture {
+        min-width: 250px;
+
+        width: 80%;
+
+        height: 320px;
+    }
+
+
+    .skill-row h3 {
+        width: auto;
+
+        flex: 1;
+    }
+
+
+    .skill-line {
+        display: none;
+    }
+
+
+    .skill-row span:last-child {
+        display: none;
+    }
+
+
+    .project-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .project-image {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .contact-content h2 {
+        font-size: 60px;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
+
+/* ==============================
+   PROFILE - YUKARI PINK THEME
+============================== */
+
+/* Giant 02 */
+#about .section-number {
+    color: rgba(255, 25, 230, 0.15);
+}
+
+/* Small PLAYER INFORMATION text */
+#about .section-heading p {
+    color: #ff19e6;
+}
+
+/* NAME / CLASS / ABOUT labels */
+#about .label {
+    color: #ff19e6;
+}
+
+/* Pink line next to Katherine's name */
+#about .profile-name {
+    border-left-color: #ff19e6;
+}
+
+/* Small pink line under PROFILE */
+#about .section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 6px;
+
+    background-color: #ff19e6;
+
+    margin-top: 10px;
+
+    transform: skew(-20deg);
+}
+
+/* ==============================
+   SKILLS - PERSONA YELLOW THEME
+============================== */
+
+/* Giant 03 */
+#skills .section-number {
+    color: rgba(255, 204, 0, 0.22);
+
+    right: 140px;   /* moves 03 farther left */
+}
+
+/* Small section label */
+#skills .section-heading p {
+    color: #f5c400;
+}
+
+/* ==============================
+   03 SKILLS - YELLOW THEME
+============================== */
+
+/* Whole Skills page */
+#skills {
+    background-color: #FFE600;
+    color: #071a40;
+}
+
+/* Giant 03 */
+#skills .big-number {
+    color: #071a40;
+    opacity: 0.18;
+
+    right: 140px;
+}
+
+/* CURRENT ABILITIES */
+#skills .section-heading p {
+    color: #071a40;
+}
+
+/* SKILLS title */
+#skills .section-heading h2 {
+    color: #071a40;
+}
+
+/* Line underneath SKILLS */
+#skills .section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 7px;
+
+    background-color: #071a40;
+
+    margin-top: 10px;
+
+    transform: skew(-20deg);
+}
+
+/* Skill boxes */
+#skills .skill-row {
+    background-color: #FFF238;
+    color: #071a40;
+
+    border-left: 8px solid #071a40;
+
+    box-shadow: 10px 10px 0 #071a40;
+}
+
+/* Skill boxes when hovering */
+#skills .skill-row:hover {
+    background-color: #FFF76A;
+
+    transform: skew(-5deg) translateX(15px);
+}
+
+/* Numbers inside skill boxes */
+#skills .skill-number {
+    color: #071a40;
+}
+
+/* Lines inside skill boxes */
+#skills .skill-line {
+    background-color: #071a40;
+}
